@@ -29,64 +29,55 @@
     {
         "label": "urljoin",
         "kind": 2,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "def urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()",
-        "detail": "client",
+        "detail": "code.client",
         "documentation": {}
     },
     {
         "label": "send_request",
         "kind": 2,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "def send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()\n    return response\ndef get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10",
-        "detail": "client",
+        "detail": "code.client",
         "documentation": {}
     },
     {
         "label": "get_errors",
         "kind": 2,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
-        "detail": "client",
+        "detail": "code.client",
         "documentation": {}
     },
     {
         "label": "get_overfit_vector",
         "kind": 2,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
-        "detail": "client",
+        "detail": "code.client",
         "documentation": {}
     },
     {
         "label": "API_ENDPOINT",
         "kind": 5,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "API_ENDPOINT = 'http://10.4.21.156'\nMAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:",
-        "detail": "client",
+        "detail": "code.client",
         "documentation": {}
     },
     {
         "label": "MAX_DEG",
         "kind": 5,
-        "importPath": "client",
-        "description": "client",
+        "importPath": "code.client",
+        "description": "code.client",
         "peekOfCode": "MAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)",
-        "detail": "client",
-        "documentation": {}
-    },
-    {
-        "label": "breed",
-        "kind": 2,
-        "importPath": "temp",
-        "description": "temp",
-        "peekOfCode": "def breed(self):\n        '''\n        Creates the next generation\n        '''\n        def russian_roulette():\n            def get_parent_index(thresholds):\n                draw = np.random.random() # in [0, 1)\n                for i in range(len(thresholds)):\n                    if draw < thresholds[i]:\n                        return i",
-        "detail": "temp",
+        "detail": "code.client",
         "documentation": {}
     }
 ]
