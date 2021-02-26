@@ -1,0 +1,83 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "urljoin",
+        "kind": 2,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "def urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "send_request",
+        "kind": 2,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "def send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()\n    return response\ndef get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "get_errors",
+        "kind": 2,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('SECRET_KEY', get_overfit_vector('SECRET_KEY')))\n    print(get_overfit_vector('SECRET_KEY'))",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "get_overfit_vector",
+        "kind": 2,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('SECRET_KEY', get_overfit_vector('SECRET_KEY')))\n    print(get_overfit_vector('SECRET_KEY'))",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "API_ENDPOINT",
+        "kind": 5,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "API_ENDPOINT = 'http://10.4.21.156'\nMAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "MAX_DEG",
+        "kind": 5,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "MAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)",
+        "detail": "client",
+        "documentation": {}
+    }
+]
