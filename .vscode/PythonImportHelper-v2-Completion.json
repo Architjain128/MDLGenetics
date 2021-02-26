@@ -49,7 +49,7 @@
         "kind": 2,
         "importPath": "client",
         "description": "client",
-        "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('SECRET_KEY', get_overfit_vector('SECRET_KEY')))\n    print(get_overfit_vector('SECRET_KEY'))",
+        "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
         "detail": "client",
         "documentation": {}
     },
@@ -58,7 +58,7 @@
         "kind": 2,
         "importPath": "client",
         "description": "client",
-        "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('SECRET_KEY', get_overfit_vector('SECRET_KEY')))\n    print(get_overfit_vector('SECRET_KEY'))",
+        "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
         "detail": "client",
         "documentation": {}
     },
