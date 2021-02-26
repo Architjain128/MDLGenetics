@@ -79,5 +79,14 @@
         "peekOfCode": "MAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)",
         "detail": "client",
         "documentation": {}
+    },
+    {
+        "label": "breed",
+        "kind": 2,
+        "importPath": "temp",
+        "description": "temp",
+        "peekOfCode": "def breed(self):\n        '''\n        Creates the next generation\n        '''\n        def russian_roulette():\n            def get_parent_index(thresholds):\n                draw = np.random.random() # in [0, 1)\n                for i in range(len(thresholds)):\n                    if draw < thresholds[i]:\n                        return i",
+        "detail": "temp",
+        "documentation": {}
     }
 ]
