@@ -27,6 +27,15 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "urljoin",
         "kind": 2,
         "importPath": "code.client",
@@ -78,6 +87,24 @@
         "description": "code.client",
         "peekOfCode": "MAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)",
         "detail": "code.client",
+        "documentation": {}
+    },
+    {
+        "label": "filename",
+        "kind": 5,
+        "importPath": "text_to_json",
+        "description": "text_to_json",
+        "peekOfCode": "filename = []\nfilename.append('./code/generations/generations_0.txt')\nfilename.append('./code/generations/generations_1.txt')\nfilename.append('./code/generations/generations_2.txt')\nfilename.append('./code/generations/generations_3.txt')\nfilename.append('./code/generations/generations_4.txt')\nfilename.append('./code/generations/generations_5.txt')\nfilename.append('./code/generations/generations_6.txt')\nfilename.append('./code/generations/generations_7.txt')\nfilename.append('./code/generations/generations_8.txt')",
+        "detail": "text_to_json",
+        "documentation": {}
+    },
+    {
+        "label": "dict1",
+        "kind": 5,
+        "importPath": "text_to_json",
+        "description": "text_to_json",
+        "peekOfCode": "dict1 = {} \ni=0\nos.mkdir(\"code/generations_test\")\n# creating dictionary \nfor file in filename :\n    text ='['\n    with open(file) as fh: \n        for line in fh: \n            text = text + line+','\n        text = text + \"]\"",
+        "detail": "text_to_json",
         "documentation": {}
     }
 ]
