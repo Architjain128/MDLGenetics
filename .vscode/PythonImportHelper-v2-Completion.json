@@ -27,84 +27,66 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "urljoin",
         "kind": 2,
-        "importPath": "code.client",
-        "description": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
         "peekOfCode": "def urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()",
-        "detail": "code.client",
+        "detail": "Added.client",
         "documentation": {}
     },
     {
         "label": "send_request",
         "kind": 2,
-        "importPath": "code.client",
-        "description": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
         "peekOfCode": "def send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)\n        exit()\n    return response\ndef get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10",
-        "detail": "code.client",
+        "detail": "Added.client",
         "documentation": {}
     },
     {
         "label": "get_errors",
         "kind": 2,
-        "importPath": "code.client",
-        "description": "code.client",
-        "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
-        "detail": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
+        "peekOfCode": "def get_errors(id, vector):\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return json.loads(send_request(id, vector, 'geterrors'))\ndef get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\ndef submit(id, vector):\n    \"\"\"\n    used to make official submission of your weight vector\n    returns string \"successfully submitted\" if properly submitted.",
+        "detail": "Added.client",
         "documentation": {}
     },
     {
         "label": "get_overfit_vector",
         "kind": 2,
-        "importPath": "code.client",
-        "description": "code.client",
-        "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":\n    print(get_errors('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5', get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5')))\n    print(get_overfit_vector('VPN75t7UGO44XsrQlo9KuKkg8yRrqgSfyh13GITsQnyvLLyvV5'))",
-        "detail": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
+        "peekOfCode": "def get_overfit_vector(id):\n    return json.loads(send_request(id, [0], 'getoverfit'))\ndef submit(id, vector):\n    \"\"\"\n    used to make official submission of your weight vector\n    returns string \"successfully submitted\" if properly submitted.\n    \"\"\"\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return send_request(id, vector, 'submit')",
+        "detail": "Added.client",
+        "documentation": {}
+    },
+    {
+        "label": "submit",
+        "kind": 2,
+        "importPath": "Added.client",
+        "description": "Added.client",
+        "peekOfCode": "def submit(id, vector):\n    \"\"\"\n    used to make official submission of your weight vector\n    returns string \"successfully submitted\" if properly submitted.\n    \"\"\"\n    for i in vector: assert 0<=abs(i)<=10\n    assert len(vector) == MAX_DEG\n    return send_request(id, vector, 'submit')\n# Replace 'SECRET_KEY' with your team's secret key (Will be sent over email)\nif __name__ == \"__main__\":",
+        "detail": "Added.client",
         "documentation": {}
     },
     {
         "label": "API_ENDPOINT",
         "kind": 5,
-        "importPath": "code.client",
-        "description": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
         "peekOfCode": "API_ENDPOINT = 'http://10.4.21.156'\nMAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:",
-        "detail": "code.client",
+        "detail": "Added.client",
         "documentation": {}
     },
     {
         "label": "MAX_DEG",
         "kind": 5,
-        "importPath": "code.client",
-        "description": "code.client",
+        "importPath": "Added.client",
+        "description": "Added.client",
         "peekOfCode": "MAX_DEG = 11\ndef urljoin(root, path=''):\n    if path: root = '/'.join([root.rstrip('/'), path.rstrip('/')])\n    return root\ndef send_request(id, vector, path):\n    api = urljoin(API_ENDPOINT, path)\n    vector = json.dumps(vector)\n    response = requests.post(api, data={'id':id, 'vector':vector}).text\n    if \"reported\" in response:\n        print(response)",
-        "detail": "code.client",
-        "documentation": {}
-    },
-    {
-        "label": "filename",
-        "kind": 5,
-        "importPath": "text_to_json",
-        "description": "text_to_json",
-        "peekOfCode": "filename = []\nfilename.append('./code/generations/generations_0.txt')\nfilename.append('./code/generations/generations_1.txt')\nfilename.append('./code/generations/generations_2.txt')\nfilename.append('./code/generations/generations_3.txt')\nfilename.append('./code/generations/generations_4.txt')\nfilename.append('./code/generations/generations_5.txt')\nfilename.append('./code/generations/generations_6.txt')\nfilename.append('./code/generations/generations_7.txt')\nfilename.append('./code/generations/generations_8.txt')",
-        "detail": "text_to_json",
-        "documentation": {}
-    },
-    {
-        "label": "dict1",
-        "kind": 5,
-        "importPath": "text_to_json",
-        "description": "text_to_json",
-        "peekOfCode": "dict1 = {} \ni=0\nos.mkdir(\"code/generations_test\")\n# creating dictionary \nfor file in filename :\n    text ='['\n    with open(file) as fh: \n        for line in fh: \n            text = text + line+','\n        text = text + \"]\"",
-        "detail": "text_to_json",
+        "detail": "Added.client",
         "documentation": {}
     }
 ]
