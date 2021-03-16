@@ -455,3 +455,215 @@ gen 9
 
 gen 10 
 
+generations1401_ 
+
+generations1401_ 
+
+[2 6] 
+
+gen 1 
+
+[7 0] 
+
+gen 2 
+
+[6 3] 
+
+gen 3 
+
+[2 1] 
+
+gen 4 
+
+[0 7] 
+
+gen 5 
+
+[1 2] 
+
+gen 6 
+
+[6 3] 
+
+gen 7 
+
+[0 6] 
+
+gen 8 
+
+[3 7] 
+
+gen 9 
+
+[2 0] 
+
+gen 10 
+
+generations1401_1st 
+
+[0 4] 
+
+gen 1 
+
+[2 3] 
+
+gen 2 
+
+[4 5] 
+
+gen 3 
+
+[1 0] 
+
+gen 4 
+
+[4 6] 
+
+gen 5 
+
+[5 4] 
+
+gen 6 
+
+[5 4] 
+
+gen 7 
+
+[0 5] 
+
+gen 8 
+
+[3 5] 
+
+gen 9 
+
+[6 2] 
+
+gen 10 
+
+generations1306_7th 
+
+[5 2] 
+
+gen 1 
+
+[0 4] 
+
+gen 2 
+
+[5 6] 
+
+gen 3 
+
+[3 7] 
+
+gen 4 
+
+[7 1] 
+
+gen 5 
+
+[1 7] 
+
+gen 6 
+
+[3 6] 
+
+gen 7 
+
+[5 7] 
+
+gen 8 
+
+[7 5] 
+
+gen 9 
+
+[0 1] 
+
+gen 10 
+
+generations1306_7th 
+
+[5 2] 
+
+gen 1 
+
+[0 1] 
+
+gen 2 
+
+[6 2] 
+
+gen 3 
+
+[7 2] 
+
+gen 4 
+
+[5 2] 
+
+gen 5 
+
+[4 3] 
+
+gen 6 
+
+[2 6] 
+
+gen 7 
+
+[6 7] 
+
+gen 8 
+
+[2 4] 
+
+gen 9 
+
+[4 6] 
+
+gen 10 
+
+generations1306_7th_4rth 
+
+[5 2] 
+
+gen 1 
+
+[5 1] 
+
+gen 2 
+
+[0 2] 
+
+gen 3 
+
+[2 0] 
+
+gen 4 
+
+[1 4] 
+
+gen 5 
+
+[7 0] 
+
+gen 6 
+
+[3 1] 
+
+gen 7 
+
+[6 5] 
+
+gen 8 
+
+[6 0] 
+
+gen 9 
+
+[6 7] 
+
+gen 10 
+
