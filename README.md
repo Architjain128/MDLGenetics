@@ -54,8 +54,8 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 + `chromosome_size = 11` number of gene in chromosome
 + `max_limit = 10` maximum value for a gene
 + `min_limit = -10` minimum value for a gene 
-+ `generations` number of generations we needed to generate
-+ `population_size` number of individuals in a generation we took bunch of different values from 8 to 50 due to restriction on call limits on server 
++ `generations` number of generations we needed to generate , we have tried generations = 10 , 15, 20, 25. but increasing number of generations above 25 have no effect in decreasing error.
++ `population_size` number of individuals in a generation we took bunch of different values from 8 to 50, due to restriction on call limits on server we have used only 8 - 20 population size mostly but we have observed that we are getting better values mostly in 8. 
 + `population` set of individuals in a generation
 + `Mutation_Probability` probability factor for performing mutation in an individuals which was set as random value
 + `Mutation_Difference_Scale` fraction of noise added to the initial chromosome which was set as random value
@@ -68,7 +68,7 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 + Graph for fittness score of best individaul in each generation <br><img src="./Images/graph.jpg">
 + Graph for fittness score of best individaul till `i`th generation  <br><img src="./Images/conm.jpg">
 + And other submitted vectors converges between 3-12
-+ Other non submitted vecotrs converges in range of 2 to 23
++ Other non submitted vectors converges in range of 2 to 23
 ### Heuristics
 #### Initial popualtion generation
 + Initially we were generating new population by adding a uniform noise (val/Mutation_Difference_Scale) to each gene but we observed that doing this results in gene having value 0 in chromosome remains 0 in other chromosome of initial population. 
