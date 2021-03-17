@@ -65,8 +65,8 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 ### Stats
 + Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations. 
 + Our best vector's converges on generation 16 
-+ Graph for fittness score of best individaul in each generation <br><img src="./Images/graph.jpg" height="400" width="600">
-+ Graph for fittness score of best individaul till `i`th generation  <br><img src="./Images/conm.jpg" height="400" width="600">
++ Graph for fittness score of best individaul in each generation <br/> <img src="./Images/graph.jpg" height="400px" width="600px">
++ Graph for fittness score of best individaul till `i`th generation  <br/> <img src="./Images/conm.jpg" height="400px" width="600px">
 + And other submitted vectors converges between 3-12
 + Other non submitted vectors converges in range of 2 to 23
 ### Heuristics
