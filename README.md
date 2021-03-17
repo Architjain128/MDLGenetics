@@ -27,9 +27,9 @@ In this step we will repeating all the above steps but just using the mutated po
 ###### NOTE : final functions used are mentioned under there respective heading and reason for the same is mention in heuristics 
 
 ### Diagram
-<img src="./Images/1.jpg">
-<img src="./Images/2.jpg">
-<img src="./Images/3.jpg">
+<img src="./Images/1.jpg" height="842px" width="595px">
+<img src="./Images/2.jpg" height="842px" width="595px">
+<img src="./Images/3.jpg" height="842px" width="595px">
 
 
 ### Initial population generation
@@ -65,8 +65,8 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 ### Stats
 + Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations. 
 + Our best vector's converges on generation 16 
-+ Graph for fittness score of best individaul in each generation <br><img src="./Images/graph.jpg">
-+ Graph for fittness score of best individaul till `i`th generation  <br><img src="./Images/conm.jpg">
++ Graph for fittness score of best individaul in each generation <br><img src="./Images/graph.jpg" height="400" width="600">
++ Graph for fittness score of best individaul till `i`th generation  <br><img src="./Images/conm.jpg" height="400" width="600">
 + And other submitted vectors converges between 3-12
 + Other non submitted vectors converges in range of 2 to 23
 ### Heuristics
