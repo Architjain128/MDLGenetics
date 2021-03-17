@@ -99,8 +99,8 @@ Since all the steps of genetic algorithm uses random number as one of its parame
   ]`
 ### Errors
 #### Validation error 
-`31473061941.08538 `
+`28439937487.903503 `
 #### Training error
-`51418476389.00041 `
+`47681643278.42501`
 ### Our reason to choose it best
 Since this is the best vector having lowest validation + training error we are able to achieve. Moreover , Since training error is minimum indicating it is able to copy the data set and validation error is minimum implies that our model not only performs well on data set but also generalizes the data set well , So, it have great chances of working well on test set. Moreover , since validation error is lower than training error indicating that the model is not overfitting the training set.
