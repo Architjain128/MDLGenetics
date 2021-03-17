@@ -1,4 +1,4 @@
-# report
+# Report
 
 ### Summary of Gentic Algorithm
 
@@ -30,6 +30,7 @@ In this step we will repeating all the above steps but just using the mutated po
 <img src="./Images/1.jpg">
 <img src="./Images/2.jpg">
 <img src="./Images/3.jpg">
+
 
 ### Initial population generation
 Since we have only one vector as a initial population and needs a set of population for the implementation so we are generating a population set named `population` of size `population_size` by generating duplicate arrays of given vector and adding some random noise into each chromosome by using function `add_noise_populate` 
@@ -67,7 +68,7 @@ Since all the steps of genetic algorithm uses random number as one of its parame
 #### Initial popualtion generation
 + Initially we were generating new population by adding a uniform noise (val/Mutation_Difference_Scale) to each gene but we observed that doing this results in gene having value 0 in chromosome remains 0 in other chromosome of initial population. 
 + Later we observed that by this we have neglected one feature always which is one of our causes for high error than we tried to add some variations to that gene having value 0 by adding the some fraction of mean of that chromosome.
-+ One more thing which we added is after observing many graphs and chromosomes we have find some best vectors and we tried to add them to the initial population so there will be more competition and we can get much better model.
++ One more thing which we added is after observing many graphs and chromosomes we have find some best vectors and we tried to add them to the initial population so there will be more competition and we can get much better model. But giving it more and more best chromosomes in initial population resulting in constant value of error , we are not able to go downward so, we skipped giving more and more known chromosome in the initial population.
 #### Selection
 + Initially we were using simple Roulette wheel selection method for selecting the chromosomes. By choosing this method, there are chances that chromosome having least fitness can also be selected many times due to uniformity in selection process.
 + So to handle this situation, we decided to drop a few inndividuals having least fitness so that they are not selected to crossovered, this also have reduced our error significantly.
@@ -75,7 +76,7 @@ Since all the steps of genetic algorithm uses random number as one of its parame
 + For crossover also , during starting few days we are not doing crossover at all.
 + Then we have tried crossover by selected an index randomly between 0 to 11 till which we are interchanging the genes of the chromosome.
 + By doing this our error was reduces but not to great extent so we decided to use  simulated binary crossover and made crossovered population as linear equation for two variables for both selected offsprings as 
-    + children1 = 0.5 * ( (1+ $\beta$ ) * parent1 + (1-$\beta$ ) * parent2 )
+    + children1 = 0.5 * ( (1+$\beta$ ) * parent1 + (1-$\beta$ ) * parent2 )
     + children2 = 0.5 * ( (1+$\beta$ ) * parent2 + (1-$\beta$ ) * parent1 )
   and then we are mixing both the child from a certain random index as explained in crossover function. This reduced our error value and helped us in obtaining best vectors.
 #### Mutation
