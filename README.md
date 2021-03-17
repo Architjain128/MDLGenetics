@@ -27,7 +27,9 @@ In this step we will repeating all the above steps but just using the mutated po
 ###### NOTE : final functions used are mentioned under there respective heading and reason for the same is mention in heuristics 
 
 ### Diagram
-
+<img src="./Images/1.jpg">
+<img src="./Images/2.jpg">
+<img src="./Images/3.jpg">
 
 ### Initial population generation
 Since we have only one vector as a initial population and needs a set of population for the implementation so we are generating a population set named `population` of size `population_size` by generating duplicate arrays of given vector and adding some random noise into each chromosome by using function `add_noise_populate` 
