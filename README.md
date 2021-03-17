@@ -55,16 +55,20 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 + `max_limit = 10` maximum value for a gene
 + `min_limit = -10` minimum value for a gene 
 + `generations` number of generations we needed to generate
-+ `population_size` number of individuals in a generation
++ `population_size` number of individuals in a generation we took bunch of different values from 8 to 50 due to restriction on call limits on server 
 + `population` set of individuals in a generation
-+ `Mutation_Probability` probability factor for performing mutation in an individuals
-+ `Mutation_Difference_Scale` fraction of noise added to the initial chromosome
-+ `best_weights_set` best vector among `genrations*population_size` 
-+ `fitness_best_weights` fitness score of the best vector
++ `Mutation_Probability` probability factor for performing mutation in an individuals which was set as random value
++ `Mutation_Difference_Scale` fraction of noise added to the initial chromosome which was set as random value
++ `best_weights_set` stores best vector among `genrations*population_size` 
++ `fitness_best_weights` stores fitness score of the best vector
  
 ### Stats
-Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations. 
-Our best vector's converges on generation 16
++ Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations. 
++ Our best vector's converges on generation 16 
++ Graph for fittness score of best individaul in each generation <br><img src="./Images/graph.jpg">
++ Graph for fittness score of best individaul till `i`th generation  <br><img src="./Images/con.jpg">
++ And other submitted vectors converges between 3-12
++ Other non submitted vecotrs converges in range of 2 to 23
 ### Heuristics
 #### Initial popualtion generation
 + Initially we were generating new population by adding a uniform noise (val/Mutation_Difference_Scale) to each gene but we observed that doing this results in gene having value 0 in chromosome remains 0 in other chromosome of initial population. 
