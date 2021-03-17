@@ -63,7 +63,8 @@ We are adding random noises to each chromosome in newly generated offsprings aft
 + `fitness_best_weights` fitness score of the best vector
  
 ### Stats
-Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations.
+Since all the steps of genetic algorithm uses random number as one of its parameter , we have seen that it converges at different iterations. 
+Our best vector's converges on generation 16
 ### Heuristics
 #### Initial popualtion generation
 + Initially we were generating new population by adding a uniform noise (val/Mutation_Difference_Scale) to each gene but we observed that doing this results in gene having value 0 in chromosome remains 0 in other chromosome of initial population. 
